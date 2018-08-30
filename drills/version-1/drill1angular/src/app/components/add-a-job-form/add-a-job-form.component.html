@@ -1,0 +1,43 @@
+<aside id="side-bar">
+  <h3>Add a Job</h3>
+  <form class="job-form" (ngSubmit)='onSubmit(f)' #f='ngForm'>
+    <div class="form-group">
+    <label for="title">Title</label>
+    <input 
+      type="text" 
+      id="title"
+      class="form-control"
+      ngModel
+      name="title">
+    </div>
+
+    <div class="form-group">
+    <label for="pay">Compensation</label>
+    <input 
+      type="text" 
+      id="pay"
+      class="form-control"
+      ngModel
+      name="pay">
+    </div>
+
+    <div class="form-group">
+    <label for="description">Description</label>
+    <textarea 
+      id="description"
+      name="description" 
+      class="form-control"
+      ngModel
+      rows="8" 
+      cols="40"></textarea>
+    </div>
+
+    <input 
+      type="submit" 
+      id="submit"
+      class="form-control"
+      ngModel="Submit"
+      name="submit" 
+      value="Submit" />
+  </form>
+</aside>

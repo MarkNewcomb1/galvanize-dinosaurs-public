@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="profile.css">
+    <title>Galvanize Dinosaurs</title>
+  </head>
+  <body>
+    <header>
+      <img src="./assets/g-dino.png" alt="Dinosaur Logo" />
+    </header>
+    <main>
+      <section id="profiles-container">
+          <h2>Profiles</h2>
+          <ul id="profiles"></ul>
+      </section>
+    </main>
+    <footer>
+      <small>Copyright 2018</small>
+    </footer>
+
+  <!-- Templates -->
+  <script id="profile-template" type="text/x-handlebars-template">
+    <div class="profile-card">
+      <header class="profile-header">
+        <img src="{{image}}" />
+        <h2>{{name}}</h2>
+      </header>
+      <section class="skills-container hidden">
+        <h4>Skills</h4>
+        <ul class="skills-list">
+          {{#each skills}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </section>
+    </div>
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js" charset="utf-8"></script>
+  <script src="profile.js" charset="utf-8"></script>
+</body>
+</html>
