@@ -17,6 +17,6 @@
     },
     "homepage": "https://github.com/gSchool/Build-an-app-using-component-based-architecture#readme",
     "devDependencies": {
-        "cypress": "^1.4.1"
+        "cypress": "^3.1.0"
     }
 }
