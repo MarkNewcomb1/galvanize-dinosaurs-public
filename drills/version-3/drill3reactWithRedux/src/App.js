@@ -36,7 +36,7 @@ class App extends Component {
 
   onSubmitForm = event => {
     event.preventDefault();
-    const formData = new FormData(action.e.target).get("form");
+    const formData = new FormData(event.target).get("form");
     this.props.submitFunction(formData);
   };
 
