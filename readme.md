@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/MarkNewcomb1/galvanize-dinosaurs-public/master/drills/version-1/assets/g-dino.png" width="250">
+![Gdino logo](https://raw.githubusercontent.com/MarkNewcomb1/galvanize-dinosaurs-public/master/drills/version-1/assets/g-dino.png)
 # Front-end Frameworks with React, Vue, and Angular:
 ## Build interactive user interfaces using component-based architecture
 
