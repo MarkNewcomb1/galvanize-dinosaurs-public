@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profiles have skills hidden by default 1`] = `
+Array [
+  <li
+    onClick={[Function]}
+  >
+    <div
+      className="profile-card"
+    >
+      <header
+        className="profile-header"
+      >
+        <img
+          alt="dino"
+          src="./assets/dino-1.png"
+        />
+        <h2>
+          T-Rex
+        </h2>
+      </header>
+      <section
+        className="skills-container hidden"
+      >
+        <h4>
+          Skills
+        </h4>
+        <ul
+          className="skills-list"
+        >
+          <li>
+            stepping on things
+          </li>
+          <li>
+            musing on life
+          </li>
+          <li>
+            MS Office
+          </li>
+        </ul>
+      </section>
+    </div>
+  </li>,
+  <li
+    onClick={[Function]}
+  >
+    <div
+      className="profile-card"
+    >
+      <header
+        className="profile-header"
+      >
+        <img
+          alt="dino"
+          src="./assets/dino3.png"
+        />
+        <h2>
+          Utahraptor
+        </h2>
+      </header>
+      <section
+        className="skills-container hidden"
+      >
+        <h4>
+          Skills
+        </h4>
+        <ul
+          className="skills-list"
+        >
+          <li>
+            being contrary
+          </li>
+        </ul>
+      </section>
+    </div>
+  </li>,
+  <li
+    onClick={[Function]}
+  >
+    <div
+      className="profile-card"
+    >
+      <header
+        className="profile-header"
+      >
+        <img
+          alt="dino"
+          src="./assets/dino-2.png"
+        />
+        <h2>
+          Dromiceiomimus
+        </h2>
+      </header>
+      <section
+        className="skills-container hidden"
+      >
+        <h4>
+          Skills
+        </h4>
+        <ul
+          className="skills-list"
+        >
+          <li>
+            Java
+          </li>
+          <li>
+            Ninja
+          </li>
+          <li>
+            MongoDB
+          </li>
+          <li>
+            Git and Github
+          </li>
+          <li>
+            Agile
+          </li>
+        </ul>
+      </section>
+    </div>
+  </li>,
+]
+`;
