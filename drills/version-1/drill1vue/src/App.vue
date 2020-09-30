@@ -1,22 +1,46 @@
 <template>
   <Header />
+  <main>
+    <JobList v-bind:jobs="jobs" />
+    <AddAJobForm v-on:add-job="addJob" />
+  </main>
   <Footer />
 </template>
 
 <script>
-import Header from './components/Header.vue';
-import Footer from './components/Footer.vue';
+import Header from "./components/Header.vue";
+import JobList from "./components/JobList.vue";
+import AddAJobForm from "./components/AddAJobForm.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Header,
-    Footer
+    JobList,
+    AddAJobForm,
+    Footer,
   },
-  setup() {
-    
-  }
-}
+  data() {
+    return {
+      jobs: [],
+    };
+  },
+  beforeMount() {
+    this.getJobs();
+  },
+  methods: {
+    async getJobs() {
+      const res = await fetch("./listings.json");
+      const data = await res.json();
+      this.jobs = data.reverse();
+    },
+
+    addJob(newJob) {
+      this.jobs = [newJob, ...this.jobs];
+    },
+  },
+};
 </script>
 
 <style>
@@ -29,7 +53,7 @@ body {
   margin: 0 30px 0 30px;
   padding: 0;
   font-family: sans-serif;
-  color: #1B997A;
+  color: #1b997a;
   display: grid;
   grid-template-rows: 15% 75% 10%;
 }
@@ -55,7 +79,7 @@ header h1 {
   grid-row: 1/2;
   grid-column: 2/3;
   margin: 0;
-  color: #C261CC;
+  color: #c261cc;
   font-family: serif;
 }
 
@@ -73,7 +97,7 @@ main section {
 
 main section h2 {
   margin: 0;
-  color: #61CCB1;
+  color: #61ccb1;
 }
 
 #job-listings li {
@@ -95,12 +119,12 @@ h4 {
 
 small {
   color: black;
-  font-size: .5rem;
+  font-size: 0.5rem;
   margin-left: 10px;
 }
 
 p {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 /* Aside */
