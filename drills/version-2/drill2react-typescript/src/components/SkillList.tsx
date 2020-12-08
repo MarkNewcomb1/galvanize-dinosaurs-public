@@ -1,6 +1,10 @@
 import React from 'react';
 
-const SkillList = ({skills}) => {
+interface SkillsProps {
+    skills: Array<string>
+}
+
+const SkillList: React.FC<SkillsProps> = ({skills}):any => {
     return (
         skills.map(skill => {
         return <li key={skill}>{skill}</li>
