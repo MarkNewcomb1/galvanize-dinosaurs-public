@@ -1,14 +1,18 @@
 <template>
   <div>
     <Header />
-    <h1>hi</h1>
+    <main>
+      <JobList v-bind:jobs="jobs" />
+    </main>
+    <!-- <h1>hi</h1>
     <div v-if="isLoading">Loading ...</div>
-    <p v-else>Done Loading: {{ jobs }}</p>
+    <p v-else>Done Loading: {{ jobs }}</p> -->
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
+import JobList from "./components/JobList.vue";
 import { ref } from "vue";
 export default {
 
@@ -30,12 +34,14 @@ export default {
 
     return {
       Header,
+      JobList,
       isLoading,
       jobs,
       getJobs,
     };
   },
 };
+
 </script>
 
 <style>
