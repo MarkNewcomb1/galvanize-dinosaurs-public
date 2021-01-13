@@ -3,16 +3,17 @@
     <Header />
     <main>
       <JobList v-bind:jobs="jobs" />
+      <AddAJobForm v-on:add-job="addJob" />
     </main>
-    <!-- <h1>hi</h1>
-    <div v-if="isLoading">Loading ...</div>
-    <p v-else>Done Loading: {{ jobs }}</p> -->
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
 import JobList from "./components/JobList.vue";
+import AddAJobForm from "./components/AddAJobForm.vue";
+import Footer from "./components/Footer.vue";
 import { ref } from "vue";
 export default {
 
@@ -30,14 +31,21 @@ export default {
       console.log(jobs.value);
     };
 
+    const addJob = (newJob) => {
+      jobs.value.unshift(newJob)
+    }
+
     getJobs();
 
     return {
       Header,
       JobList,
+      AddAJobForm,
       isLoading,
       jobs,
       getJobs,
+      Footer,
+      addJob
     };
   },
 };
