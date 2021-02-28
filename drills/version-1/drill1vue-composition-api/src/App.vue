@@ -2,8 +2,10 @@
   <div>
     <Header />
     <main>
-      <JobList v-bind:jobs="jobs" />
-      <AddAJobForm v-on:add-job="addJob" />
+      <!-- :jobs is shorthand for v-bind:jobs -->
+      <JobList :jobs="jobs" />
+      <!-- @add-job is shorthand for v-on:add-job -->
+      <AddAJobForm @add-job="addJob" />
     </main>
     <Footer />
   </div>
